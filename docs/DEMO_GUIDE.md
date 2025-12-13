@@ -35,7 +35,7 @@ Before starting the demo, ensure you have:
 ### Step 1.1: Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/shyamsridhar123/CSCI-S-89B-Final-Project.git
 cd CSCI-S-89B-Final-Project
 ```
 
@@ -472,10 +472,9 @@ Use this checklist to ensure you capture all necessary screenshots:
 **Solution**: Run Notebook 02 first to create model files in `models/` directory.
 
 ### Dashboard won't start
-**Solution**: Ensure port 7860 is available, or specify a different port:
-```bash
-python app.py --port 7861
-```
+**Solution**: Ensure port 7860 is available. If the port is in use, you can either:
+1. Stop the process using port 7860: `lsof -ti:7860 | xargs kill -9`
+2. Or temporarily modify `app.py` line 991 to use a different port (e.g., `server_port=7861`)
 
 ### Analysis takes too long
 **Solution**: Disable some analysis options for faster demo, or use a shorter document.
