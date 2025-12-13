@@ -68,9 +68,16 @@ pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 ```
 
-### 2. Train the Document Classifier
+### 2. Run Notebooks (Required Before Dashboard)
 
-The classifier must be trained before using the dashboard:
+The classifier must be trained before using the dashboard. **Run notebooks in order:**
+
+| Step | Notebook | Purpose | Time |
+|------|----------|---------|------|
+| 0 | `00_setup_models.ipynb` | (Optional) Pre-download all models | ~2-5 min |
+| 1 | `01_data_preparation.ipynb` | Download SEC data, create train/val/test splits | ~5-10 min |
+| 2 | `02_train_classifier.ipynb` | Train Keras neural network classifier | ~2-5 min |
+| 3 | `03_finbert_enhanced_detection.ipynb` | (Optional) FinBERT-enhanced risk detection demo | ~2-3 min |
 
 ```bash
 # Run data preparation first
@@ -123,7 +130,9 @@ NLPFinalProject/
 │   ├── metrics_extractor.py      # Financial metrics + forward-looking
 │   └── summarizer.py             # Extractive summarization
 │
-├── notebooks/                    # Jupyter notebooks
+├── notebooks/                    # Jupyter notebooks (see notebooks/README.md for details)
+│   ├── README.md                 # 📋 Notebook execution guide
+│   ├── 00_setup_models.ipynb     # Pre-download models (optional)
 │   ├── 01_data_preparation.ipynb # Data download and preprocessing
 │   ├── 02_train_classifier.ipynb # Model training and evaluation
 │   └── 03_finbert_enhanced_detection.ipynb  # FinBERT hybrid approach for risk/forward-looking
