@@ -585,3 +585,13 @@ Harvard Extension School
 ## 🎥 Video Presentation
 
 [Link to Video Presentation] *(Add YouTube/Zoom link here)*
+
+### 📘 Demo Guide
+
+For detailed step-by-step instructions on how to run a comprehensive demo of the entire solution, including screen recording tips and screenshot checklists, see the [**Demo Guide**](docs/DEMO_GUIDE.md).
+
+The demo guide covers:
+- Environment setup and notebook execution
+- Dashboard launch and user experience walkthrough
+- Screen recording recommendations
+- Sample narration script for presentations
